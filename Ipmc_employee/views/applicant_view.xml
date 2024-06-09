@@ -1,0 +1,41 @@
+<odoo>
+    <record id="hr_applicant_view_form_ipms" model="ir.ui.view">
+        <field name="name">hr.applicant.form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <sheet position="inside">
+                <notebook>
+                    <page string="Instruction and Condition">
+                        <field name="instructionandcondition" placeholder="Instruction and Condition ............."/>
+                    </page>
+                </notebook>
+            </sheet>
+
+            <field name="email_from" position="after">
+                <field name="contact_name"/>
+            </field>
+
+            <field name="profile_image" position="replace">
+                <field name="profile_image"/>
+            </field>
+
+            <field name="cv" position="replace">
+                <field name="cv"/>
+            </field>
+
+            <field name="authorized_iban" position="replace">
+                <field name="authorized_iban"/>
+            </field>
+            <field name="applied_job_workplace_id" position="before">
+                <field name="job_app_announcement_id"/>
+            </field>
+
+            <xpath expr="//notebook/page" position="replace">
+
+                <!--                <button name="create_employee_from_applicant" string="Create Employee" type="object" class="oe_highlight"/>-->
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

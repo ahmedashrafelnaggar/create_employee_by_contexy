@@ -29,6 +29,7 @@
     'author': 'Ahmed',
     'data': [
         'views/employee_view.xml',
+        'views/applicant_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,

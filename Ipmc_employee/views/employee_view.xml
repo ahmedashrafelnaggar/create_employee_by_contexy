@@ -21,37 +21,47 @@
                                 <field name="hr_recruitment_degree_id" options="{'no_create': True}"/>
                                 <field name="speciality"/>
                                 <field name="birth_date"/>
+                                <field name="contact_name"/>
+                                <field name="applicant_id"/>
+                                <field name="partner_mobile"/>
+                                <field name="phone"/>
+                                <field name="email_from"/>
+                                <field name="email_cc"/>
                                 <field name="address"/>
                                 <field name="Employement_Status"/>
+                                <field name="res_country_state_id"/>
                                 <field name="years_of_experience"/>
                                 <field name="employer"/>
                                 <field name="workplace"/>
                             </group>
+
                             <group string="Work Experience In Haj">
                                 <field name="years_of_experience_in_haj"/>
                                 <field name="job_title_in_haj"/>
                                 <field name="party_name_in_haj"/>
                             </group>
                             <group string="Required job information">
-<!--                                <field name="job_app_announcement_id"/>-->
+                                <field name="job_app_announcement_id"/>
                                 <field name="applied_job_workplace_id"/>
                                 <field name="first_job_id_applied"/>
                                 <field name="first_job_sector_id"/>
                                 <field name="second_job_id_applied"/>
-                                <field name="second_job_sector_id"/>
                                 <field name="third_job_id_applied"/>
                                 <field name="third_job_sector_id"/>
                             </group>
                             <group string="Financial Data">
                                 <field name="bank_id"/>
                                 <field name="iban"/>
-                                <field name="authorized_iban"/>
                             </group>
                             <group string="Attachment">
-                                <field name="profile_image"/>
                                 <field name="cv"/>
+                                <field name="authorized_iban"/>
+                                <field name="profile_image"/>
                             </group>
                         </group>
+                    </page>
+                    <page string="Instruction and Condition">
+                        <field name="instructionandcondition" placeholder="Instruction and Condition ............."/>
                     </page>
                 </notebook>
             </sheet>

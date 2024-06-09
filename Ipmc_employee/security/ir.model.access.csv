@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 acceess_employment_status,acceess_employment_status,model_employment_status,,1,1,1,1
+acceess_hr_applicant,acceess_hr_applicant,model_hr_applicant,,1,1,1,1
