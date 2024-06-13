@@ -1,8 +1,8 @@
 from odoo import models, fields, _
 
 
-class EmploymentStatus(models.Model):
-    _inherit = 'employment.status'
+class HrEmployee(models.Model):
+    _inherit = "hr.employee"
 
     employment_id = fields.Many2one('employment.status')
     res_country_id = fields.Many2one('res.country', 'Country')

@@ -27,13 +27,61 @@
             <field name="authorized_iban" position="replace">
                 <field name="authorized_iban"/>
             </field>
+
+            <field name="second_job_id_applied" position="after">
+                <field name="second_job_sector_id"/>
+            </field>
+
             <field name="applied_job_workplace_id" position="before">
                 <field name="job_app_announcement_id"/>
             </field>
 
-            <xpath expr="//notebook/page" position="replace">
+            <xpath expr="//header" position="replace">
 
-                <!--                <button name="create_employee_from_applicant" string="Create Employee" type="object" class="oe_highlight"/>-->
+<!--                this mean field betat3t model hr.employee default_name == field which is partner_name in model hr.applicant-->
+<!--                and default this field job_title  in model hr.employee == same value beta3t the field name in model applicant-->
+                <button name="create_employee_from_applicant" string="Create Employee" type="object" style="margin:10px"
+                        context="{
+                        'default_mobile_phone': partner_phone,
+                        'default_work_phone': partner_mobile,
+                        'default_work_email': email_from,
+                        'default_iqama_number': iqama_number,
+                        'default_iqama_exp_date': iqama_exp_date,
+                        'default_iqama_src_id': iqama_src_id,
+                        'default_nationality_id': nationality_id,
+                        'default_gender': gender,
+                        'default_speciality': speciality,
+                        'default_hr_recruitment_degree_id': hr_recruitment_degree_id,
+                        'default_birth_date': birth_date,
+                        'default_email_cc': email_cc,
+                        'default_address': address,
+                        'default_Employement_Status': Employement_Status,
+                        'default_years_of_experience': years_of_experience,
+                        'default_employer': employer,
+                        'default_workplace': workplace,
+                        'default_years_of_experience_in_haj': years_of_experience_in_haj,
+                        'default_job_title_in_haj': job_title_in_haj,
+                        'default_party_name_in_haj': party_name_in_haj,
+                        'default_job_app_announcement_id': job_app_announcement_id,
+                        'default_applied_job_workplace_id': applied_job_workplace_id,
+                        'default_first_job_id_applied': first_job_id_applied,
+                        'default_first_job_sector_id': first_job_sector_id,
+                        'default_second_job_id_applied': second_job_id_applied,
+                        'default_second_job_sector_id': second_job_sector_id,
+                        'default_third_job_id_applied': third_job_id_applied,
+                        'default_third_job_sector_id': third_job_sector_id,
+                        'default_bank_id': bank_id,
+                        'default_iban': iban,
+                        'default_cv': cv,
+
+                        'default_profile_image': profile_image,
+                        'default_authorized_iban': authorized_iban,
+                        'default_instructionandcondition': instructionandcondition,
+
+
+
+                        }"
+                        class="oe_highlight"/>
             </xpath>
 
         </field>
