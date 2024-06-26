@@ -20,12 +20,8 @@
                             <field name="hr_recruitment_degree_id" options="{'no_create': True}"/>
                             <field name="speciality"/>
                             <field name="birth_date"/>
-                            <field name="contact_name"/>
-                            <field name="applicant_id"/>
                             <field name="partner_mobile"/>
-                            <field name="phone"/>
                             <field name="email_from"/>
-                            <field name="email_cc"/>
                             <field name="address"/>
                             <field name="Employement_Status"/>
                             <field name="res_country_state_id"/>

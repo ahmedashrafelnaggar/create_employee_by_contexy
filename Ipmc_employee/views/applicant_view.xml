@@ -12,6 +12,11 @@
                 </notebook>
             </sheet>
 
+
+            <field name="Employement_Status" position="after">
+                <field name="res_country_state_id"/>
+            </field>
+
             <field name="email_from" position="after">
                 <field name="contact_name"/>
             </field>
@@ -42,9 +47,12 @@
 <!--                and default this field job_title  in model hr.employee == same value beta3t the field name in model applicant-->
                 <button name="create_employee_from_applicant" string="Create Employee" type="object" style="margin:10px"
                         context="{
+                        'default_category_ids': categ_ids,
+
+                        'default_res_country_state_id': res_country_state_id,
                         'default_mobile_phone': partner_phone,
-                        'default_work_phone': partner_mobile,
-                        'default_work_email': email_from,
+                        'default_partner_mobile': partner_mobile,
+                        'default_email_from': email_from,
                         'default_iqama_number': iqama_number,
                         'default_iqama_exp_date': iqama_exp_date,
                         'default_iqama_src_id': iqama_src_id,

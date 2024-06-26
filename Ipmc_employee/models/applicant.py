@@ -51,6 +51,7 @@ class IpmcApplicants(models.Model):
     employee_id = fields.Many2one('hr.employee')
     job_title = fields.Char()
 
+    # tags = fields.many2many('hr.employee.category', string='Tags')
 
     # this method smart button ( method , button in form view with related field)
     # you should firstly do relation field with model patient type many 2 one then do this method and put button in form view
@@ -65,7 +66,10 @@ class IpmcApplicants(models.Model):
         action['views'] = [[view_id, 'form']]
         action['context'] = {'default_name': self.partner_name,
                              'default_job_title': self.name,
-                             'default_department_id': self.department_id.id}
+                             'default_department_id': self.department_id.id,
+                             'default_mobile_phone': self.partner_phone,
+                             'default_work_phone': self.partner_mobile,
+                             'default_work_email': self.email_cc}
 
         # Employee = self.env['hr.employee']
         # data = {
